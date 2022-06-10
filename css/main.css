@@ -1,0 +1,13 @@
+/* No CSS *//*# sourceMappingURL=main.css.map */
+
+*{
+    border: 1px solid red;
+}
+
+img {
+    width: 100px;
+}
+
+ul {
+    list-style-type: none;
+}
