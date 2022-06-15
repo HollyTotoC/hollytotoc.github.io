@@ -1,0 +1,16 @@
+@import '../Utils/mixins';
+
+header { 
+    @include row-c;
+    background-color: white;
+
+}
+
+.logo {
+    width: 50%;
+    margin: 1em;
+    &__img {
+        width: 100%;
+        object-fit: contain;
+    }
+}

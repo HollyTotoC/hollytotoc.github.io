@@ -1,0 +1,9 @@
+@import "../Utils/variables";
+
+@mixin btn-grad {
+    border: none;
+    padding: 1em;
+    border-radius: 2em;
+    color: white;
+    background: linear-gradient(170deg, $secondary-color, $primary-color);
+}

@@ -1,0 +1,51 @@
+@import '../Utils/mixins';
+@import '../Utils/variables';
+@import '../Composants/buttons';
+
+body {
+    z-index: 10;
+}
+
+main { 
+    @include col-c;
+}
+
+.search {
+    @include row-c;
+    padding: .5em;
+    color: $dgray;
+    font-size: $m;
+    background-color: $mgray;
+    &__input {
+        border: none;
+        background-color: transparent;
+        font-weight: bold;
+        width: 35%;
+    }
+}
+
+.intro { 
+    @include col-c;
+    text-align: center;
+    background-color: $lgray;
+    padding: 2em 0 2em 0;
+    &__title {
+        font-weight: bold;
+        font-size: $xl;
+        margin: 0;
+    }
+    &__btn {
+        @include btn-grad;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
+.info {
+    &__list { 
+        @include rst-list;
+    }
+    &__li { 
+        @include row-c;
+    }
+}
