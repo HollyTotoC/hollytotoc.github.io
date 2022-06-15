@@ -5,6 +5,12 @@
     align-items: center;
 }
 
+@mixin row-l {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 @mixin col-c {
     display: flex;
     flex-direction: column;

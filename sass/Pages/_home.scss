@@ -1,9 +1,9 @@
-@import '../Utils/mixins';
 @import '../Utils/variables';
 @import '../Composants/buttons';
+@import '../Utils/mixins';
 
 body {
-    z-index: 10;
+    margin: 0;
 }
 
 main { 
@@ -12,7 +12,7 @@ main {
 
 .search {
     @include row-c;
-    padding: .5em;
+    padding: .5rem;
     color: $dgray;
     font-size: $m;
     background-color: $mgray;
@@ -21,6 +21,9 @@ main {
         background-color: transparent;
         font-weight: bold;
         width: 35%;
+        &:focus{
+            border: none;
+        }
     }
 }
 
@@ -28,24 +31,54 @@ main {
     @include col-c;
     text-align: center;
     background-color: $lgray;
-    padding: 2em 0 2em 0;
+    padding: 2rem 0 2rem 0;
     &__title {
         font-weight: bold;
         font-size: $xl;
         margin: 0;
     }
     &__btn {
-        @include btn-grad;
+        @include grad;
         margin-left: 25%;
         margin-right: 25%;
     }
 }
 
 .info {
+    margin-top: 2rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: $m;
+    font-weight: bold;
+    &__title {
+        font-size: $l;
+    }
     &__list { 
         @include rst-list;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
     }
     &__li { 
-        @include row-c;
+        @include row-l;
+        padding: $s 0 $s 2rem;
+        gap: 1rem;
+        background: $lgray;
+        border-radius: 1rem;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 1rem;
+        filter: drop-shadow(3px 6px 3px $mgray);
+    }
+    &--i { 
+        color: lighten(black, 50%)
+    }
+    &__nb { 
+        background: $primary-color;
+        color: white;
+        font-weight: normal;
+        padding: .25rem .5rem .25rem .5rem;
+        border-radius: 3rem;
+        position: absolute;
+        left: -10px;
     }
 }

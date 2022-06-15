@@ -39,7 +39,7 @@ header {
 /* Colors */
 /* Font-size */
 body {
-  z-index: 10;
+  margin: 0;
 }
 
 main {
@@ -69,9 +69,9 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: .5em;
+  padding: .5rem;
   color: #353535;
-  font-size: 1em;
+  font-size: 1rem;
   background-color: #EAEAEA;
 }
 
@@ -80,6 +80,10 @@ main {
   background-color: transparent;
   font-weight: bold;
   width: 35%;
+}
+
+.search__input:focus {
+  border: none;
 }
 
 .intro {
@@ -95,12 +99,12 @@ main {
           justify-content: center;
   text-align: center;
   background-color: #F6F6F6;
-  padding: 2em 0 2em 0;
+  padding: 2rem 0 2rem 0;
 }
 
 .intro__title {
   font-weight: bold;
-  font-size: 1.6em;
+  font-size: 1.6rem;
   margin: 0;
 }
 
@@ -110,14 +114,30 @@ main {
   border-radius: 2em;
   color: white;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
+  -webkit-filter: drop-shadow(2px 4px 5px #c3c3c3);
+          filter: drop-shadow(2px 4px 5px #c3c3c3);
   margin-left: 25%;
   margin-right: 25%;
+}
+
+.info {
+  margin-top: 2rem;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.info__title {
+  font-size: 1.3rem;
 }
 
 .info__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 .info__li {
@@ -128,11 +148,31 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0.5rem 0 0.5rem 2rem;
+  gap: 1rem;
+  background: #F6F6F6;
+  border-radius: 1rem;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 1rem;
+  -webkit-filter: drop-shadow(3px 6px 3px #EAEAEA);
+          filter: drop-shadow(3px 6px 3px #EAEAEA);
+}
+
+.info--i {
+  color: gray;
+}
+
+.info__nb {
+  background: #9356DC;
+  color: white;
+  font-weight: normal;
+  padding: .25rem .5rem .25rem .5rem;
+  border-radius: 3rem;
+  position: absolute;
+  left: -10px;
 }
 /*# sourceMappingURL=main.css.map */

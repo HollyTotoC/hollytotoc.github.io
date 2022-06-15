@@ -1,9 +1,10 @@
 @import "../Utils/variables";
 
-@mixin btn-grad {
+@mixin grad {
     border: none;
     padding: 1em;
     border-radius: 2em;
     color: white;
     background: linear-gradient(170deg, $secondary-color, $primary-color);
+    filter: drop-shadow(2px 4px 5px $shadow);
 }
