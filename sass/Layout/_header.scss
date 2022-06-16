@@ -1,23 +1,26 @@
 @import '../Utils/mixins';
+@import '../Utils/variables';
 
 header { 
+    z-index: 30;
+    position: fixed;
     @include row-c;
     background-color: white;
-
+    box-shadow: 0rem .2rem .9rem $shadow;
 }
 
 .logo {
-
+    position: relative;
     width: 50%;
     margin: 1em;
     &__img {
-        border: 1px solid red;
         width: 100%;
         object-fit: contain;
     }
     &__link {
         position: absolute;
-        left: 5%;
-        top: 2.5%;
+        left: -35%;
+        top: 10%;
+        font-size: 1.3rem;
     }
 }

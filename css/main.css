@@ -15,7 +15,16 @@ a, a:hover, a:visited {
   text-decoration: none;
 }
 
+textarea:focus, input:focus {
+  outline: none;
+}
+
+/* Colors */
+/* Font-size */
+/* Card design */
 header {
+  z-index: 30;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,15 +39,17 @@ header {
       -ms-flex-align: center;
           align-items: center;
   background-color: white;
+  -webkit-box-shadow: 0rem 0.2rem 0.9rem #c3c3c3;
+          box-shadow: 0rem 0.2rem 0.9rem #c3c3c3;
 }
 
 .logo {
+  position: relative;
   width: 50%;
   margin: 1em;
 }
 
 .logo__img {
-  border: 1px solid red;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -46,8 +57,9 @@ header {
 
 .logo__link {
   position: absolute;
-  left: 5%;
-  top: 2.5%;
+  left: -35%;
+  top: 10%;
+  font-size: 1.3rem;
 }
 
 /* Colors */
@@ -56,7 +68,7 @@ header {
 /* Colors */
 /* Font-size */
 /* Card design */
-main {
+.content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,6 +79,8 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 4.34rem;
+  position: relative;
 }
 
 .search {
@@ -122,6 +136,10 @@ main {
   margin: 0;
 }
 
+.intro__subtitle {
+  margin-bottom: 1rem;
+}
+
 .intro__btn {
   border: none;
   padding: 1em;
@@ -132,6 +150,7 @@ main {
           filter: drop-shadow(2px 4px 5px #c3c3c3);
   margin-left: 25%;
   margin-right: 25%;
+  margin-bottom: 1.5rem;
 }
 
 .info {
@@ -245,6 +264,10 @@ main {
   color: #278870;
 }
 
+.result__card--label {
+  position: relative;
+}
+
 .result__card--title {
   font-weight: 800;
   margin: 1.3rem 1rem .2rem 1rem;
@@ -257,14 +280,16 @@ main {
 }
 
 .result__card--icon {
-  border: 1px solid red;
   position: absolute;
   right: 8%;
-  bottom: 10%;
-  font-size: 2rem;
+  bottom: 20%;
+  font-size: 1.5rem;
+  text-shadow: .1rem 0rem .1rem black, -0.1rem 0rem .1rem black, 0rem .1rem .1rem black, 0rem -0.1rem 0.1rem black;
+  color: white;
 }
 
 .result__card--icon i:hover {
+  text-shadow: none;
   color: transparent;
   background-clip: text;
   background-image: linear-gradient(170deg, #FF79DA, #9356DC);
@@ -280,7 +305,15 @@ a, a:hover, a:visited {
   text-decoration: none;
 }
 
+textarea:focus, input:focus {
+  outline: none;
+}
+
+/* Colors */
+/* Font-size */
+/* Card design */
 .container {
+  position: relative;
   background: #353535;
   padding: 1rem 2rem 2rem 1rem;
   color: white;
@@ -308,7 +341,6 @@ a, a:hover, a:visited {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: .5rem;
-  border: 1px solid red;
 }
 
 .container__item {
@@ -323,5 +355,181 @@ a, a:hover, a:visited {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
+}
+
+/* Colors */
+/* Font-size */
+/* Card design */
+/* Colors */
+/* Font-size */
+/* Card design */
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 4.34rem;
+  height: 100%;
+  position: relative;
+}
+
+.illu {
+  z-index: 0;
+  width: 100%;
+}
+
+.illu__img {
+  width: 100%;
+}
+
+.menu {
+  border: 1px solid red;
+  z-index: 10;
+  background: #F6F6F6;
+  border-radius: 3rem 3rem 0 0;
+  position: relative;
+  top: 50%;
+  padding: 1.5rem 1rem 1.5rem 1rem;
+}
+
+.menu__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu__name {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.menu__btn {
+  border: none;
+  padding: 1em;
+  border-radius: 2em;
+  color: white;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  -webkit-filter: drop-shadow(2px 4px 5px #c3c3c3);
+          filter: drop-shadow(2px 4px 5px #c3c3c3);
+  padding: 1rem 2rem 1rem 2rem;
+  margin-left: 34%;
+  margin-right: 34%;
+  margin-bottom: 1.5rem;
+}
+
+.choice__step {
+  font-weight: 300;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.choice__step:before {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 1px;
+  bottom: -.8rem;
+  left: 0%;
+  border-bottom: 0.4rem solid #99E2D0;
+}
+
+.choice__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: white;
+  border-radius: 1.5rem;
+  padding: 0;
+}
+
+.choice__item--p {
+  width: 80%;
+}
+
+.choice__item:hover .choice__price .fa-solid {
+  display: inline;
+  background: #99E2D0;
+  border-radius: 0rem 1.5rem 1.5rem 0rem;
+  color: white;
+}
+
+.choice__item:hover .choice__item--p {
+  width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.choice__title {
+  font-weight: 500;
+  margin: 1rem .5rem .5rem .5rem;
+}
+
+.choice__subtitle {
+  margin: 0rem .5rem 1rem .5rem;
+}
+
+.choice__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.choice__price p {
+  margin-right: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: -3.5rem;
+}
+
+.choice__price .fa-solid {
+  padding: 1.8rem 1.4rem;
+  display: none;
+}
+
+footer {
+  position: relative;
+  top: 10rem;
 }
 /*# sourceMappingURL=main.css.map */

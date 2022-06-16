@@ -1,0 +1,118 @@
+@import '../Utils/variables';
+@import '../Composants/buttons';
+@import '../Utils/mixins';
+
+body {
+}
+
+.content {
+    @include col-c;
+    padding-top: 4.34rem;
+    height: 100%;
+    position: relative;
+}
+
+.illu {
+    z-index: 0;
+    width: 100%; 
+    &__img {
+        width: 100%;
+    }
+}
+
+.menu {
+    border: 1px solid red;
+    z-index: 10;
+    background: $lgray;
+    border-radius: 3rem 3rem 0 0;
+    position: relative; 
+    top: 50%;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    &__title {
+        @include row-l;
+        justify-content: space-between;
+    }
+    &__name{
+        font-family: 'Shrikhand', cursive; 
+        font-size: $xl;
+        font-weight: 900;
+    }
+    &__btn {
+        @include grad;
+        padding: 1rem 2rem 1rem 2rem;
+        margin-left: 34%;
+        margin-right: 34%;
+        margin-bottom: 1.5rem;;
+    }
+}
+
+.choice {
+    &__step {
+        font-weight: 300;
+        display: inline-block;
+        position: relative;
+        text-transform: uppercase;
+        &:before{
+            content: "";
+            position: absolute;
+            width: 3rem;
+            height: 1px;
+            bottom: -.8rem;
+            left: 0%;
+            border-bottom: .4rem solid $tertiary-color;
+        }
+    }
+    &__item {
+        @include row-l;
+        align-items: stretch;
+        justify-content: space-between;
+        background: white;
+        border-radius: 1.5rem;
+        padding: 0;
+        &--p{
+            width: 80%;
+        }
+        &:hover {
+            .choice__price .fa-solid {
+                display: inline;
+                background: $tertiary-color;
+                border-radius: 0rem 1.5rem 1.5rem 0rem;
+                color: white;
+            }
+            .choice__item--p {
+                width: 60%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    &__title {
+        font-weight: 500;
+        margin: 1rem .5rem .5rem .5rem;
+    }
+    &__subtitle {
+        margin: 0rem .5rem 1rem .5rem;
+    }
+    &__price {
+        @include row-l;
+        font-size: 1.3rem;
+        font-weight: 600;
+        position: relative;
+        & p {
+            margin-right: 1rem;
+            position: absolute;
+            bottom: 0;
+            left: -3.5rem;
+        }
+        & .fa-solid {
+            padding: 1.8rem 1.4rem;
+            display: none;
+        }
+    }
+}
+
+footer {
+    position: relative;
+    top: 10rem;
+}

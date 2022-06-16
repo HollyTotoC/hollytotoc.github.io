@@ -1,6 +1,8 @@
 @import "../Base/reset";
+@import "../Utils/variables";
 
 .container {
+    position: relative;
     background: $dgray;
     padding: 1rem 2rem 2rem 1rem;
     color: white;
@@ -15,7 +17,6 @@
         @include rst-list;
         @include col-l;
         gap: .5rem;
-        border: 1px solid red;
     }
     &__item {
         @include row-l;

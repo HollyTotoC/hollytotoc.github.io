@@ -2,8 +2,10 @@
 @import '../Composants/buttons';
 @import '../Utils/mixins';
 
-main { 
+.content { 
     @include col-c;
+    padding-top: 4.34rem;
+    position: relative;
 }
 
 .search {
@@ -33,10 +35,14 @@ main {
         font-size: $xl;
         margin: 0;
     }
+    &__subtitle {
+        margin-bottom: 1rem;
+    }
     &__btn {
         @include grad;
         margin-left: 25%;
         margin-right: 25%;
+        margin-bottom: 1.5rem;;
     }
 }
 
@@ -114,6 +120,9 @@ main {
             background: $new;
             color: darken($new, 40%);
         }
+        &--label {
+            position: relative;
+        }
         &--title {
             font-weight: 800;
             margin: 1.3rem 1rem .2rem 1rem;
@@ -124,12 +133,14 @@ main {
             font-size: $m;
         }
         &--icon {
-            border: 1px solid red;
             position: absolute;
             right: 8%;
-            bottom: 10%;
-            font-size: 2rem;
+            bottom: 20%;
+            font-size: 1.5rem;
+            text-shadow: .1rem 0rem .1rem black, -0.1rem 0rem .1rem black, 0rem .1rem .1rem black, 0rem -0.1rem 0.1rem black;
+            color: white;  
             & i:hover {
+                text-shadow: none;
                 color: transparent;
                 background-clip: text;
                 background-image: linear-gradient(170deg, $secondary-color, $primary-color);

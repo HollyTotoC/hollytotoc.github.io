@@ -13,7 +13,7 @@
     ></script>
 
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
     </style>
   </head>
 
@@ -31,39 +31,39 @@
     </header>
 
     <!--! Main content-->
-    <main>
+    <main class="content">
       <!-- Image -->
-      <div class="logo">
-        <img class
+      <div class="illu">
+        <img class="illu__img"
           src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
           alt="A la française"
         />
       </div>
 
       <!-- Menu -->
-      <div>
+      <div class="menu">
         <!--* Name -->
-        <div>
-          <h1>A la française</h1>
-          <div>
+        <div class="menu__title">
+          <h1 class="menu__name">A la française</h1>
+          <div class="menu__i">
             <i class="fa-solid fa-heart"></i>
           </div>
         </div>
 
         <!--* Bloc choice-->
-        <div>
+        <div class="choice">
           <!-- Starter -->
-          <div>
-            <h2>Entrées</h2>
-            <div>
-              <div>
-                <h3>Tartare de poulpe acidulé</h3>
-                <p>Aux zestes d'orange</p>
+          <div class="choice__part">
+            <h2 class="choice__step">Entrées</h2>
+            <div class="choice__item">
+              <div class="choice__item--p">
+                <h3 class="choice__title">Tartare de poulpe acidulé</h3>
+                <p class="choice__subtitle">Aux zestes d'orange</p>
               </div>
-              <div>
+              <div class="choice__price">
                 <p>20€</p>
                   <div>
-                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="choice__price--check fa-solid fa-circle-check"></i>
                   </div>
               </div>
             </div>
@@ -105,7 +105,7 @@
         </div>
 
         <!--* Btn -->
-        <button type="button">Commander</button>
+        <button type="button" class="menu__btn">Commander</button>
       </div>
     </main>
 
