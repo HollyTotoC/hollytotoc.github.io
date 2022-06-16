@@ -2,9 +2,6 @@
 @import '../Composants/buttons';
 @import '../Utils/mixins';
 
-body {
-}
-
 .content {
     @include col-c;
     padding-top: 4.34rem;
