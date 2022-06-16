@@ -7,10 +7,17 @@ header {
 }
 
 .logo {
+
     width: 50%;
     margin: 1em;
     &__img {
+        border: 1px solid red;
         width: 100%;
         object-fit: contain;
+    }
+    &__link {
+        position: absolute;
+        left: 5%;
+        top: 2.5%;
     }
 }

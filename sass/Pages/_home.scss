@@ -2,10 +2,6 @@
 @import '../Composants/buttons';
 @import '../Utils/mixins';
 
-body {
-    margin: 0;
-}
-
 main { 
     @include col-c;
 }
@@ -82,3 +78,64 @@ main {
         left: -10px;
     }
 }
+
+.result {
+    background: $lgray;
+    padding: 2rem 1rem 2rem 1rem;
+    &__title {
+        font-size: $xl;
+        font-weight: 900;
+        margin: 0rem 0rem 2rem;
+    }
+    &__content {
+        @include col-c;
+        gap: 1.4rem;
+        filter: drop-shadow(2px 4px 5px $shadow);
+    }
+    &__card {
+        position: relative;
+        background:white;
+        border-radius: $card-radius;
+        &--img {
+            border-radius: $img-radius;
+            overflow: hidden;
+            & img {
+                object-fit: cover;
+                aspect-ratio: $img-dim;
+            }
+        }
+        &--new {
+            z-index: 10;
+            position: absolute;
+            top: 1%;
+            right: 4%;
+            padding: 0.4rem;
+            border-radius: .2rem;
+            background: $new;
+            color: darken($new, 40%);
+        }
+        &--title {
+            font-weight: 800;
+            margin: 1.3rem 1rem .2rem 1rem;
+            font-size: $l;
+        }
+        &--subtitle {
+            margin: 0rem 1rem 1.3rem 1rem;
+            font-size: $m;
+        }
+        &--icon {
+            border: 1px solid red;
+            position: absolute;
+            right: 8%;
+            bottom: 10%;
+            font-size: 2rem;
+            & i:hover {
+                color: transparent;
+                background-clip: text;
+                background-image: linear-gradient(170deg, $secondary-color, $primary-color);
+                cursor: pointer;
+            } 
+        }
+    }
+}
+

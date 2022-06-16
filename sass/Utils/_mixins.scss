@@ -17,6 +17,11 @@
     justify-content: center;
 }
 
+@mixin col-l {
+    display: flex;
+    flex-direction: column;
+    }
+
 @mixin rst-list {
     margin: 0;
     padding: 0;

@@ -1,0 +1,24 @@
+@import "../Base/reset";
+
+.container {
+    background: $dgray;
+    padding: 1rem 2rem 2rem 1rem;
+    color: white;
+    &__img{
+        width: 33%;
+        margin: 1rem 0rem 1rem 0rem;
+        &--white {
+            filter: invert(100%);
+        }
+    }
+    &__list {
+        @include rst-list;
+        @include col-l;
+        gap: .5rem;
+        border: 1px solid red;
+    }
+    &__item {
+        @include row-l;
+        gap: 1rem;
+    }
+}
