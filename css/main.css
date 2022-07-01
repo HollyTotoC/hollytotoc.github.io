@@ -41,6 +41,7 @@ header {
   background-color: white;
   -webkit-box-shadow: 0rem 0.2rem 0.9rem #c3c3c3;
           box-shadow: 0rem 0.2rem 0.9rem #c3c3c3;
+  width: 100%;
 }
 
 .logo {
@@ -80,7 +81,6 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 4.34rem;
-  position: relative;
 }
 
 .search {
@@ -313,7 +313,6 @@ textarea:focus, input:focus {
 /* Font-size */
 /* Card design */
 .container {
-  position: relative;
   background: #353535;
   padding: 1rem 2rem 2rem 1rem;
   color: white;
@@ -376,7 +375,6 @@ textarea:focus, input:focus {
           justify-content: center;
   padding-top: 4.34rem;
   height: 100%;
-  position: relative;
 }
 
 .illu {
@@ -391,8 +389,8 @@ textarea:focus, input:focus {
 .menu {
   z-index: 10;
   background: #F6F6F6;
-  border-radius: 3rem 3rem 0 0;
-  position: relative;
+  border-radius: 2rem 2rem 0 0;
+  margin-top: -3rem;
   top: 50%;
   padding: 1.5rem 1rem 1.5rem 1rem;
 }
@@ -415,7 +413,7 @@ textarea:focus, input:focus {
 
 .menu__name {
   font-family: 'Shrikhand', cursive;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 900;
 }
 
@@ -476,8 +474,23 @@ textarea:focus, input:focus {
   width: 80%;
 }
 
+.choice__item .fa-solid {
+  -webkit-transform: rotate(-90);
+          transform: rotate(-90);
+  width: 0%;
+  display: block;
+  position: absolute;
+  left: 0;
+}
+
 .choice__item:hover .choice__price .fa-solid {
-  display: inline;
+  -webkit-transform: rotate(90);
+          transform: rotate(90);
+  -webkit-transition: display 1s, -webkit-transform 2s;
+  transition: display 1s, -webkit-transform 2s;
+  transition: display 1s, transform 2s;
+  transition: display 1s, transform 2s, -webkit-transform 2s;
+  width: 100%;
   background: #99E2D0;
   border-radius: 0rem 1.5rem 1.5rem 0rem;
   color: white;
@@ -512,23 +525,15 @@ textarea:focus, input:focus {
           align-items: center;
   font-size: 1.3rem;
   font-weight: 600;
-  position: relative;
 }
 
 .choice__price p {
   margin-right: 1rem;
-  position: absolute;
   bottom: 0;
   left: -3.5rem;
 }
 
 .choice__price .fa-solid {
   padding: 1.8rem 1.4rem;
-  display: none;
-}
-
-footer {
-  position: relative;
-  top: 10rem;
 }
 /*# sourceMappingURL=main.css.map */

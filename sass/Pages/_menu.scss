@@ -6,7 +6,6 @@
     @include col-c;
     padding-top: 4.34rem;
     height: 100%;
-    position: relative;
 }
 
 .illu {
@@ -20,17 +19,18 @@
 .menu {
     z-index: 10;
     background: $lgray;
-    border-radius: 3rem 3rem 0 0;
-    position: relative; 
+    border-radius: 2rem 2rem 0 0;
+    margin-top: -3rem;
     top: 50%;
     padding: 1.5rem 1rem 1.5rem 1rem;
     &__title {
         @include row-l;
         justify-content: space-between;
+
     }
     &__name{
         font-family: 'Shrikhand', cursive; 
-        font-size: $xl;
+        font-size: $ttl-menu;
         font-weight: 900;
     }
     &__btn {
@@ -68,9 +68,12 @@
         &--p{
             width: 80%;
         }
+        }
         &:hover {
             .choice__price .fa-solid {
-                display: inline;
+                transform: rotate(90);
+                transition: display 1s, transform 2s;
+                width: 100%;
                 background: $tertiary-color;
                 border-radius: 0rem 1.5rem 1.5rem 0rem;
                 color: white;
@@ -91,24 +94,22 @@
         margin: 0rem .5rem 1rem .5rem;
     }
     &__price {
-        @include row-l;
+        border: 
+        @include: row-l;
         font-size: 1.3rem;
         font-weight: 600;
-        position: relative;
         & p {
             margin-right: 1rem;
-            position: absolute;
             bottom: 0;
             left: -3.5rem;
         }
         & .fa-solid {
             padding: 1.8rem 1.4rem;
-            display: none;
+            transform: rotate(-90);
+            width: 0%;
+            display: block;
+            position: absolute;
+            left: 0;
         }
     }
-}
-
-footer {
-    position: relative;
-    top: 10rem;
 }
