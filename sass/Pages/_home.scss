@@ -7,6 +7,9 @@
     padding-top: 4.34rem;
 }
 
+
+@include loadermix;
+
 .search {
     @include row-c;
     padding: .5rem;
@@ -138,13 +141,18 @@
             font-size: 1.5rem;
             text-shadow: .1rem 0rem .1rem black, -0.1rem 0rem .1rem black, 0rem .1rem .1rem black, 0rem -0.1rem 0.1rem black;
             color: white;  
-            & i:hover {
-                text-shadow: none;
-                color: transparent;
-                background-clip: text;
-                background-image: linear-gradient(170deg, $secondary-color, $primary-color);
-                cursor: pointer;
-            } 
+            & i {
+                transform: scale (0);
+                transform: scale .2s ease-in-out;
+                &:hover {
+                    transform: scale (1);
+                    text-shadow: none;
+                    color: transparent;
+                    background-clip: text;
+                    background-image: linear-gradient(170deg, $secondary-color, $primary-color);
+                    cursor: pointer;
+                } 
+            }
         }
     }
 }

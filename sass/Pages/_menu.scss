@@ -59,33 +59,30 @@
         }
     }
     &__item {
+        filter: drop-shadow(2px 4px 5px $shadow);
         @include row-l;
         align-items: stretch;
-        justify-content: space-between;
+        overflow: hidden;
         background: white;
-        border-radius: 1.5rem;
+        border-radius: 1rem;
         padding: 0;
         &--p{
-            width: 80%;
+            width: 90%;
+            transition: width .2s ease-in-out;
+            white-space: nowrap;
         }
         }
         &:hover {
-            .choice__price .fa-solid {
-                transform: rotate(90);
-                transition: display 1s, transform 2s;
-                width: 100%;
-                background: $tertiary-color;
-                border-radius: 0rem 1.5rem 1.5rem 0rem;
-                color: white;
+            & .choice__price--check .fa-solid {
+                transform: rotate(0deg);
             }
-            .choice__item--p {
+            & .choice__item--p {
                 width: 60%;
-                white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
         }
-    }
+
     &__title {
         font-weight: 500;
         margin: 1rem .5rem .5rem .5rem;
@@ -94,22 +91,29 @@
         margin: 0rem .5rem 1rem .5rem;
     }
     &__price {
-        border: 
-        @include: row-l;
+        @include row-l;
+        flex-wrap: nowrap;
         font-size: 1.3rem;
         font-weight: 600;
+        position: relative;
         & p {
-            margin-right: 1rem;
+            margin: 0rem 1rem 0rem 1.5rem;
             bottom: 0;
             left: -3.5rem;
+            transform: translate(.5rem,1rem);
+            font-size: $m;
         }
-        & .fa-solid {
+        &--check {
+            color: white;
+            background: $tertiary-color;
             padding: 1.8rem 1.4rem;
-            transform: rotate(-90);
-            width: 0%;
-            display: block;
+            width: 1.5rem;
             position: absolute;
-            left: 0;
+            right: -4.6rem;
+            & .fa-solid {
+                transform: rotate(-90deg);
+                transition: transform .7s ease-in-out;
+            }
         }
     }
 }
