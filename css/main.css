@@ -694,12 +694,12 @@ textarea:focus, input:focus {
   white-space: nowrap;
 }
 
-.choice:hover .choice__price--check .fa-solid {
+.choice__item:hover .choice__price--check .fa-solid {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
 
-.choice:hover .choice__item--p {
+.choice__item:hover .choice__item--p {
   width: 60%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -707,10 +707,14 @@ textarea:focus, input:focus {
 
 .choice__title {
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 1rem .5rem .5rem .5rem;
 }
 
 .choice__subtitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0rem .5rem 1rem .5rem;
 }
 

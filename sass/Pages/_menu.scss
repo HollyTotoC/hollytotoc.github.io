@@ -71,7 +71,6 @@
             transition: width .2s ease-in-out;
             white-space: nowrap;
         }
-        }
         &:hover {
             & .choice__price--check .fa-solid {
                 transform: rotate(0deg);
@@ -82,12 +81,16 @@
                 text-overflow: ellipsis;
             }
         }
-
+    }
     &__title {
         font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
         margin: 1rem .5rem .5rem .5rem;
     }
     &__subtitle {
+        overflow: hidden;
+        text-overflow: ellipsis;
         margin: 0rem .5rem 1rem .5rem;
     }
     &__price {
