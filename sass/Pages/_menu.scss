@@ -47,12 +47,12 @@
     &__item {
         @for $i from 1 through 3 {
             &:nth-child(#{$i}n) {
-                animation-delay: #{$i * 0.3}s;
+                animation-delay: #{$i * 0.2}s;
                 animation-name: slidein;
                 animation-duration: 1s;
                 animation-fill-mode: forwards;
                 opacity: 0;
-                transform: translateY(2rem);
+                transform: translateY(1rem);
             }
         }
     }
@@ -60,7 +60,7 @@
     @keyframes slidein {
         from {
             opacity: 0;
-            transform: translateY(2rem);
+            transform: translateY(1rem);
         }
         to {
             opacity: 1;

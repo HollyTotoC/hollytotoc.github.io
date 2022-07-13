@@ -399,31 +399,18 @@ header {
   cursor: pointer;
 }
 .result__card--icon .anim {
-  /* 
-  background: linear-gradient(170deg, $secondary-color, $primary-color);
-  background-clip: text;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
-  */
   position: absolute;
+  z-index: 15;
   left: 0;
-  top: 1px;
-  color: red;
-  opacity: 0;
+  top: 2px;
   transform: scale(0.01);
-  transition: scale 1s ease-out;
-}
-.result__card--icon .shape {
-  transform: scale(1);
-  opacity: 1;
-  transition: scale 1s ease-in-out, opacity 1s ease-in-out;
-  color: black;
-}
-.result__card--icon:hover .shape {
-  opacity: 0;
-  transform: scale(1.3);
+  transition: transform 0.1s ease-out;
 }
 .result__card--icon:hover .anim {
-  opacity: 1;
   transform: scale(1);
 }
 
@@ -532,8 +519,8 @@ textarea:focus, input:focus {
   /*animation*/
 }
 .choice__item:nth-child(1n) {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
   -webkit-animation-name: slidein;
           animation-name: slidein;
   -webkit-animation-duration: 1s;
@@ -541,9 +528,21 @@ textarea:focus, input:focus {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
-  transform: translateY(2rem);
+  transform: translateY(1rem);
 }
 .choice__item:nth-child(2n) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateY(1rem);
+}
+.choice__item:nth-child(3n) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
   -webkit-animation-name: slidein;
@@ -553,24 +552,12 @@ textarea:focus, input:focus {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
-  transform: translateY(2rem);
-}
-.choice__item:nth-child(3n) {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
-  -webkit-animation-name: slidein;
-          animation-name: slidein;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 0;
-  transform: translateY(2rem);
+  transform: translateY(1rem);
 }
 @-webkit-keyframes slidein {
   from {
     opacity: 0;
-    transform: translateY(2rem);
+    transform: translateY(1rem);
   }
   to {
     opacity: 1;
@@ -580,7 +567,7 @@ textarea:focus, input:focus {
 @keyframes slidein {
   from {
     opacity: 0;
-    transform: translateY(2rem);
+    transform: translateY(1rem);
   }
   to {
     opacity: 1;
