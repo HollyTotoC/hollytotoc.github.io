@@ -47,7 +47,6 @@
     &__item {
         @for $i from 1 through 3 {
             &:nth-child(#{$i}n) {
-                border: 1px solid red;
                 animation-delay: #{$i * 0.3}s;
                 animation-name: slidein;
                 animation-duration: 1s;

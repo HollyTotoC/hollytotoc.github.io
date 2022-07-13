@@ -532,7 +532,6 @@ textarea:focus, input:focus {
   /*animation*/
 }
 .choice__item:nth-child(1n) {
-  border: 1px solid red;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
   -webkit-animation-name: slidein;
@@ -545,7 +544,6 @@ textarea:focus, input:focus {
   transform: translateY(2rem);
 }
 .choice__item:nth-child(2n) {
-  border: 1px solid red;
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
   -webkit-animation-name: slidein;
@@ -558,7 +556,6 @@ textarea:focus, input:focus {
   transform: translateY(2rem);
 }
 .choice__item:nth-child(3n) {
-  border: 1px solid red;
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
   -webkit-animation-name: slidein;
