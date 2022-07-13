@@ -139,20 +139,38 @@
             right: 8%;
             bottom: 20%;
             font-size: 1.5rem;
-            text-shadow: .1rem 0rem .1rem black, -0.1rem 0rem .1rem black, 0rem .1rem .1rem black, 0rem -0.1rem 0.1rem black;
-            color: white;  
-            & i {
-                transform: scale (0);
-                transform: scale .2s ease-in-out;
-                &:hover {
-                    transform: scale (1);
-                    text-shadow: none;
-                    color: transparent;
-                    background-clip: text;
-                    background-image: linear-gradient(170deg, $secondary-color, $primary-color);
-                    cursor: pointer;
-                } 
+            cursor: pointer;
+            & .anim {
+                /* 
+                background: linear-gradient(170deg, $secondary-color, $primary-color);
+                background-clip: text;
+                color: transparent;
+                */
+                position: absolute;
+                left: 0;
+                top: 1px;
+                color: red;
+                opacity: 0;
+                transform: scale(0.01);
+                transition: scale 1s ease-out;
             }
+            & .shape {
+                transform: scale(1);
+                opacity: 1;
+                transition: scale 1s ease-in-out, opacity 1s ease-in-out;
+                color: black;
+            }  
+            &:hover {
+                & .shape {
+                    opacity: 0;
+                    transform: scale(1.3);
+                }
+                & .anim {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                } 
+
         }
     }
 }
