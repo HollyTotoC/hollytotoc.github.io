@@ -46,9 +46,10 @@
         <div class="menu__title">
           <h1 class="menu__name">A la française</h1>
           <div class="menu__i">
-            <i class="fa-solid  fa-heart"></i>
+            <i class="fas anim fa-heart"></i>
+            <i class="far shape fa-heart"></i>
           </div>
-        </div>
+          </div>
 
         <!--* Bloc choice-->
         <div class="choice">
@@ -95,22 +96,97 @@
                 </div>
               </article>
             </div>
-
-            </section>
-          </div>
+          </section>
 
           <!-- Main dish-->
-          <div>
-            <h2>Plats</h2>
+          <section class="choice__part">
+            <h2 class="choice__step">Plats</h2>
+            <div>
+              <article class="choice__item">
+                <div class="choice__item--p">
+                  <h3 class="choice__title">Coquilles Saint-Jacques</h3>
+                  <p class="choice__subtitle">Accompagnées d'une purée de panais</p>
+                </div>
+                <div class="choice__price">
+                  <p>40€                  </p>
+                  <div class="choice__price--check">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+              </article>
 
-          </div>
+              <article class="choice__item">
+                <div class="choice__item--p">
+                  <h3 class="choice__title">Magret de canard</h3>
+                  <p class="choice__subtitle">Et parmentier de pommes de terre</p>
+                </div>
+                <div class="choice__price">
+                  <p>35€</p>
+                  <div class="choice__price--check">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article class="choice__item">
+                <div class="choice__item--p">
+                  <h3 class="choice__title">Pigeonneau d’Ille-et-Vilaine</h3>
+                  <p class="choice__subtitle">Sur son lit de gnocchis aux légumes</p>
+                </div>
+                <div class="choice__price">
+                  <p>44€</p>
+                  <div class="choice__price--check">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
 
           <!-- Desert -->
-          <div>
-            <h2>Desserts</h2>
+          <section class="choice__part">
+            <h2 class="choice__step">Desserts</h2>
+            <div>
+              <article class="choice__item">
+                <div class="choice__item--p">
+                  <h3 class="choice__title">Pétales de violettes glacés</h3>
+                  <p class="choice__subtitle">Et purée de noisettes</p>
+                </div>
+                <div class="choice__price">
+                  <p>18€</p>
+                  <div class="choice__price--check">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+              </article>
 
-          </div>
-        </div>
+              <article class="choice__item">
+                <div class="choice__item--p">
+                  <h3 class="choice__title">Fondant au chocolat</h3>
+                  <p class="choice__subtitle">Revisité</p>
+                </div>
+                <div class="choice__price">
+                  <p>22€</p>
+                  <div class="choice__price--check">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article class="choice__item">
+                <div class="choice__item--p">
+                  <h3 class="choice__title">Millefeuille croustillant</h3>
+                  <p class="choice__subtitle">Myrtilles et pâte d’amande</p>
+                </div>
+                <div class="choice__price">
+                  <p>23€</p>
+                  <div class="choice__price--check">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
 
         <!--* Btn -->
         <button type="button" class="menu__btn">Commander</button>
@@ -119,19 +195,25 @@
 
     <!--! Footer -->
     <footer class="container">
-      <div class="container__img">
-        <img src="/images/logo/ohmyfood.png" alt="logo" class="container__img--white" />
-      </div>
+      <a href="#">
+        <div class="container__img">
+          <img src="/images/logo/ohmyfood.png" alt="logo" class="container__img--white" />
+        </div>
+      </a>
       <ul class="container__list">
         <li class="container__item">
-          <i class="fa-solid fa-utensils"></i>
-          Proposer un restaurant
+          <a href="#">
+            <i class="fa-solid fa-utensils"></i>
+            Proposer un restaurant
+          </a>
         </li>
         <li class="container__item">
-          <i class="fa-solid fa-handshake-angle"></i>
-          Devenir partenaire
+          <a href="#">
+            <i class="fa-solid fa-handshake-angle"></i>
+            Devenir partenaire
+          </a>
         </li>
-        <li class="container__item">Mentions légales</li>
+        <li class="container__item"><a href="#">Mentions légales</a></li>
         <li class="container__item"><a href="mailto:contact@Contact">Contact</a></li>
       </ul>
     </footer>

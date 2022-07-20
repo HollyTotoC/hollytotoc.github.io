@@ -2,11 +2,6 @@
 @import '../Composants/buttons';
 @import '../Utils/mixins';
 
-.content { 
-    @include col-c;
-    padding-top: 4.34rem;
-}
-
 
 @include loadermix;
 
@@ -20,9 +15,12 @@
         border: none;
         background-color: transparent;
         font-weight: bold;
-        width: 35%;
+        width: 40%;
+        text-align: center; 
         &:focus{
             border: none;
+        }
+        ::placeholder {
         }
     }
 }
@@ -32,9 +30,10 @@
     text-align: center;
     background-color: $lgray;
     padding: 2rem 0 2rem 0;
+    gap: 1rem;
     &__title {
-        font-weight: bold;
         font-size: $xl;
+        font-weight: 900;
         margin: 0;
     }
     &__subtitle {
@@ -42,20 +41,21 @@
     }
     &__btn {
         @include grad;
-        margin-left: 25%;
-        margin-right: 25%;
+        margin: auto;
+        width: 12rem;
         margin-bottom: 1.5rem;;
     }
 }
 
 .info {
     margin-top: 2rem;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 5vw;
+    padding-right: 5vw;
     font-size: $m;
     font-weight: bold;
     &__title {
-        font-size: $l;
+        font-size: $xl;
+        font-weight: 900;
     }
     &__list { 
         @include rst-list;
@@ -68,13 +68,14 @@
         gap: 1rem;
         background: $lgray;
         border-radius: 1rem;
-        margin-left: 2%;
-        margin-right: 2%;
+        margin: auto;
+        width: 17rem;
         margin-bottom: 1rem;
         filter: drop-shadow(3px 6px 3px $mgray);
     }
     &--i { 
-        color: lighten(black, 50%)
+        color: lighten(black, 50%);
+        margin: 0.625rem;
     }
     &__nb { 
         background: $primary-color;
@@ -140,8 +141,7 @@
             bottom: 20%;
             font-size: 1.5rem;
             cursor: pointer;
-            & .anim {
-                
+            & .anim {                
                 background: linear-gradient(170deg, $secondary-color, $primary-color);
                 background-clip: text;
                 color: transparent;
@@ -154,11 +154,69 @@
             }
             &:hover {
                 & .anim {
-                    transform: scale(1);
+                    transform: scale(1.02);
                 }
-                } 
+            } 
 
         }
     }
 }
 
+/* Breakpoint */
+
+    /* Tablet */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+    /* Desktop */
+
+@media screen and (min-width: 1024px) {
+    .intro { 
+        &__title {
+            font-size: $xl;
+            font-weight: 900;
+            margin: 0;
+        }
+        &__subtitle {
+            margin-bottom: 1rem;
+            margin: 1rem;
+        }
+    }
+
+    .info {
+        padding-left: 1vw;
+        padding-right: 1vw;
+        margin-bottom: 1rem;
+        &__list {
+            @include row-c;
+            gap: 1.5rem;
+            padding: 1rem 9rem;
+        }
+        &-li {
+            width : 15rem;
+        }
+    }
+
+    .result {
+        &__content {
+            @include row-l;
+            flex-wrap: wrap;
+            gap: 2vw;
+            margin-bottom: 2rem;
+        }
+        &__card {
+            width: 22.5vw;
+            &--img {
+                & img {
+                    aspect-ratio: $img-dim-desktop;
+                }
+            }
+            &--new {
+                top: 4%;
+                right: 4%;
+            }
+            }
+    }
+}

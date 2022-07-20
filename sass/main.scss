@@ -1,4 +1,5 @@
 img { width: 100%; }
+*, *::before, *::after { margin: 0;}
 
 @import "./Base/typography";
 @import "./Base/reset";

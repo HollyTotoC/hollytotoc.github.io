@@ -2,12 +2,6 @@
 @import '../Composants/buttons';
 @import '../Utils/mixins';
 
-.content {
-    @include col-c;
-    padding-top: 4.34rem;
-    height: 100%;
-}
-
 .illu {
     z-index: 0;
     width: 100%; 
@@ -23,6 +17,7 @@
     margin-top: -3rem;
     top: 50%;
     padding: 1.5rem 1rem 1.5rem 1rem;
+    position: relative;
     &__title {
         @include row-l;
         justify-content: space-between;
@@ -40,6 +35,30 @@
         margin-right: 34%;
         margin-bottom: 1.5rem;;
     }
+    &__i {
+        position: absolute;
+        right: 7%;
+        top: 6%;
+        font-size: 1.5rem;
+        cursor: pointer;
+        & .anim {                
+            background: linear-gradient(170deg, $secondary-color, $primary-color);
+            background-clip: text;
+            color: transparent;
+            position: absolute;
+            z-index: 15;
+            left: 0;
+            top: 2px;
+            transform: scale(0.01);
+            transition: transform .1s ease-out;
+        }
+        &:hover {
+            & .anim {
+                transform: scale(1.02);
+            }
+        } 
+
+    }
 }
 
 .choice {
@@ -49,7 +68,7 @@
             &:nth-child(#{$i}n) {
                 animation-delay: #{$i * 0.2}s;
                 animation-name: slidein;
-                animation-duration: 1s;
+                animation-duration: .3s;
                 animation-fill-mode: forwards;
                 opacity: 0;
                 transform: translateY(1rem);
@@ -73,6 +92,7 @@
         display: inline-block;
         position: relative;
         text-transform: uppercase;
+        margin-bottom: 2rem;
         &:before{
             content: "";
             position: absolute;
@@ -92,19 +112,29 @@
         border-radius: 1rem;
         padding: 0;
         margin-bottom: 1rem;
-        &--p{
-            width: 90%;
-            transition: width .2s ease-in-out;
+        &--p {
+            flex-grow: 1;
+            width: 85vh;
             white-space: nowrap;
+        }
+        & .choice__price{
+            transform: translateX(0);
+
         }
         &:hover {
             & .choice__price--check .fa-solid {
                 transform: rotate(0deg);
             }
             & .choice__item--p {
-                width: 60%;
+                width: 60vh;
+                flex-grow: 1;
                 overflow: hidden;
                 text-overflow: ellipsis;
+            }
+            & .choice__price {
+                transform: translateX(-4.5rem);
+                transition: transform .2s ease-in-out;
+                
             }
         }
     }
@@ -125,11 +155,10 @@
         font-size: 1.3rem;
         font-weight: 600;
         position: relative;
+        flex-grow: 1;
         & p {
-            margin: 0rem 1rem 0rem 1.5rem;
-            bottom: 0;
-            left: -3.5rem;
-            transform: translate(.5rem,1rem);
+            margin: 0rem 0rem 0rem 1.5rem;
+            transform: translate(-1vh,2vh);
             font-size: $m;
         }
         &--check {
@@ -141,7 +170,10 @@
             right: -4.6rem;
             & .fa-solid {
                 transform: rotate(-90deg);
-                transition: transform .7s ease-in-out;
+                transition: transform .3s ease-in-out;
+                &::before, &::after {
+                    box-sizing: content-box;
+                }
             }
         }
     }
