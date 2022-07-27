@@ -8,7 +8,10 @@
     background: linear-gradient(170deg, $secondary-color 0%, $primary-color 100%);
     filter: drop-shadow(2px 4px 5px $shadow);
     &:hover {
+        cursor: pointer;
         background: linear-gradient(170deg, rgba(255,121,218,1) 0%, rgba(231,113,218,1) 44%, rgba(147,86,220,1) 100%);
         filter: drop-shadow(2px 4px 5px #2a292958);
     }
+
+
 }

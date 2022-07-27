@@ -35,6 +35,7 @@
     
     @media screen and (min-width: 1024px) {
         .container {
+            z-index: 15;
             &__img{
                 width: 10rem;
                 }

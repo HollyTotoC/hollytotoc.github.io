@@ -27,18 +27,19 @@
         font-family: 'Shrikhand', cursive; 
         font-size: $ttl-menu;
         font-weight: 900;
+        margin-bottom: 1rem;
     }
     &__btn {
+        display: flex;
+        justify-content: center;
         @include grad;
         padding: 1rem 2rem 1rem 2rem;
-        margin-left: 34%;
-        margin-right: 34%;
+        margin: auto;
         margin-bottom: 1.5rem;;
     }
     &__i {
         position: absolute;
         right: 7%;
-        top: 6%;
         font-size: 1.5rem;
         cursor: pointer;
         & .anim {                
@@ -62,9 +63,11 @@
 }
 
 .choice {
+    margin-bottom: 1rem;
+
     /*animation*/
     &__item {
-        @for $i from 1 through 3 {
+        @for $i from 1 through 4 {
             &:nth-child(#{$i}n) {
                 animation-delay: #{$i * 0.2}s;
                 animation-name: slidein;
@@ -102,79 +105,158 @@
             left: 0%;
             border-bottom: .4rem solid $tertiary-color;
         }
+        &--flex {
+            @include col-c;
+            align-items: center;
+        }
     }
     &__item {
         filter: drop-shadow(2px 4px 5px $shadow);
-        @include row-l;
-        align-items: stretch;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
         overflow: hidden;
+        width: 90vw;
+        height: 13vh;
         background: white;
         border-radius: 1rem;
-        padding: 0;
         margin-bottom: 1rem;
         &--p {
+            display: flex;
+            flex-direction: column;
             flex-grow: 1;
-            width: 85vh;
-            white-space: nowrap;
-        }
-        & .choice__price{
-            transform: translateX(0);
-
-        }
-        &:hover {
-            & .choice__price--check .fa-solid {
-                transform: rotate(0deg);
-            }
-            & .choice__item--p {
-                width: 60vh;
-                flex-grow: 1;
+            min-width: 0vw;
+            & p, & h3 {
+                transition: all .3s ease-in-out;
+                min-width: 75vw;
+                max-width: 100vw;
+                white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
-            & .choice__price {
-                transform: translateX(-4.5rem);
-                transition: transform .2s ease-in-out;
-                
+        }
+        &:hover {
+            cursor: pointer;
+            & .choice__price--check .fa-solid {
+                transform: rotate(0deg);
+            }
+            & .choice__price--check {
+                margin-right: 0;
+            }
+            & .choice__item--p {
+                & p, & h3 {
+                    min-width: 50vw;
+                    max-width: 50vw;
+
+                }
             }
         }
     }
     &__title {
         font-weight: 500;
-        overflow: hidden;
-        text-overflow: ellipsis;
         margin: 1rem .5rem .5rem .5rem;
     }
     &__subtitle {
-        overflow: hidden;
-        text-overflow: ellipsis;
         margin: 0rem .5rem 1rem .5rem;
     }
     &__price {
-        @include row-l;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
         flex-wrap: nowrap;
+        flex-grow: 1;
         font-size: 1.3rem;
         font-weight: 600;
-        position: relative;
-        flex-grow: 1;
         & p {
-            margin: 0rem 0rem 0rem 1.5rem;
-            transform: translate(-1vh,2vh);
+            width: 10vw;
+            padding: 1.5rem .5rem .5rem 2rem;
             font-size: $m;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
         }
         &--check {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
             color: white;
             background: $tertiary-color;
-            padding: 1.8rem 1.4rem;
-            width: 1.5rem;
-            position: absolute;
-            right: -4.6rem;
+            padding: 1.8rem 1.8rem;
+            width: 3rem;
+            margin-right: -3.6rem;
+            transition: margin-right .3s ease-in-out;
             & .fa-solid {
                 transform: rotate(-90deg);
-                transition: transform .3s ease-in-out;
-                &::before, &::after {
-                    box-sizing: content-box;
-                }
+                transition: transform .4s ease-in-out;
             }
         }
     }
 }
+
+/* Breakpoint */
+
+    /* Tablet */
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+    }
+    
+        /* Desktop */
+    
+    @media screen and (min-width: 1024px) {
+        .illu {
+            overflow: hidden;
+            height: 50vh;
+            transition: height .4s ease-in-out;
+            & img {filter: blur(.2rem); transition: all .4s ease-in-out;}
+            &:hover {
+                height: 71.5vw; 
+                & img{filter: blur(0rem);}
+                & ~ .menu {
+                margin-top: -20rem;
+                }
+            }
+        }
+        
+        .menu {
+            margin-top: -10rem;
+            transition: margin-top .4s ease-in-out;
+        }
+
+        .choice {
+            display: flex;
+            flex-direction: row;
+            max-width: 100vw;
+            gap: 1.5vw;
+            &__part {
+                flex-grow: 1;
+            }
+            &__item {
+                width: 31vw;
+                height: 10vh;
+                &--p {
+                    & p, & h3 {
+                        transition: all .3s ease-in-out;
+                        min-width: 24vw;
+                        max-width: 31vw;
+                    }
+                }
+                &:hover {
+                    & .choice__item--p {
+                        & p, & h3 {
+                            min-width: 17vw;
+                            max-width: 17vw;
+                        }
+                    }
+                }
+            }
+            &__price {
+                & p {
+                    width: 3vw;
+                }
+            }
+        }
+    }
