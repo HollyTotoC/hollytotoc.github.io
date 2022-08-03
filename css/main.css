@@ -142,7 +142,7 @@ header {
   left: 50%;
   margin-top: -50vh;
   margin-left: -50vw;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(255, 255, 255, 0.87);
   opacity: 1;
   -webkit-animation-name: loaderkey;
           animation-name: loaderkey;
@@ -182,7 +182,7 @@ header {
   width: 6px;
   height: 18px;
   border-radius: 20%;
-  background: white;
+  background: #9356DC;
 }
 
 .lds-spinner div:nth-child(1) {
