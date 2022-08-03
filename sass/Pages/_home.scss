@@ -21,8 +21,6 @@
         &:focus{
             border: none;
         }
-        ::placeholder {
-        }
     }
 }
 
@@ -31,25 +29,27 @@
     text-align: center;
     background-color: $lgray;
     padding: 2rem 0 2rem 0;
-    gap: 1rem;
+    gap: 2rem;
     &__title {
         font-size: $xl;
         font-weight: 900;
         margin: 0;
+        margin-bottom: .8rem;
     }
-    &__subtitle {
-        margin-bottom: 1rem;
+    &__sub {
+        font-size: 1.1rem;
+        color: lighten(black, 40%);
     }
     &__btn {
         @include grad;
         margin: auto;
-        width: 12rem;
-        margin-bottom: 1.5rem;;
+        width: 15rem;
+        margin-bottom: 2rem;
     }
 }
 
 .info {
-    margin-top: 2rem;
+    margin-top: 2.2rem;
     padding-left: 5vw;
     padding-right: 5vw;
     font-size: $m;
@@ -59,13 +59,15 @@
         font-weight: 900;
     }
     &__list { 
+        @include col-c;
         @include rst-list;
         padding-top: 1.5em;
         padding-bottom: 1.5em;
+        gap: 1rem;
     }
     &__li { 
         @include row-l;
-        padding: $s 0 $s 2rem;
+        padding: 1rem 0 1rem 2rem;
         gap: 1rem;
         background: $lgray;
         border-radius: 1rem;
@@ -73,8 +75,15 @@
         width: 17rem;
         margin-bottom: 1rem;
         filter: drop-shadow(3px 6px 3px $mgray);
+        &--lpink {
+            background: $lpink;
+            & i {
+                color: $primary-color;
+            }
+        }
     }
     &--i { 
+        font-size: $l;
         color: lighten(black, 50%);
         margin: 0.625rem;
     }
@@ -117,7 +126,7 @@
         &--new {
             z-index: 10;
             position: absolute;
-            top: 1%;
+            top: 4%;
             right: 4%;
             padding: 0.4rem;
             border-radius: .2rem;
@@ -137,19 +146,21 @@
             font-size: $m;
         }
         &--icon {
+            display: flex;
+            align-items: center;
             position: absolute;
             right: 8%;
             bottom: 20%;
             font-size: 1.5rem;
+            font-weight: 200;
             cursor: pointer;
             & .anim {                
-                background: linear-gradient(170deg, $secondary-color, $primary-color);
+                background: linear-gradient(0deg, $secondary-color, $primary-color);
                 background-clip: text;
                 color: transparent;
                 position: absolute;
                 z-index: 15;
-                left: 0;
-                top: 2px;
+                top: -1px;
                 transform: scale(0.01);
                 transition: transform .1s ease-out;
             }
@@ -168,7 +179,33 @@
     /* Tablet */
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    
+    .info {
+        &__list {
+            @include row-c;
+            gap: 1.5rem;
+        }
+    }
+
+        .result {
+            &__content {
+                @include row-l;
+                flex-wrap: wrap;
+                gap: 4vw;
+                margin-bottom: 2rem;
+            }
+            &__card {
+                width: 42vw;
+                &--img {
+                    & img {
+                        aspect-ratio: $img-dim-desktop;
+                    }
+                }
+                &--new {
+                    top: 4%;
+                    right: 4%;
+                }
+                }
+        }
 }
 
     /* Desktop */

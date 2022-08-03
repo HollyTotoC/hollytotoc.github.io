@@ -28,9 +28,11 @@ header {
     }
     &__link {
         position: fixed;
-        left: 1rem;
-        top: 3.3vh;
+        transform: translate(50%, 50%);
+        left: 1vw;
+        top: 1.5vh;
         font-size: 1.3rem;
+        z-index: 20;
         & a {            
             display:flex;
             align-items: stretch;

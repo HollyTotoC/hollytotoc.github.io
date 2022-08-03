@@ -20,13 +20,14 @@
     position: relative;
     &__title {
         @include row-l;
+        justify-content: center;
         justify-content: space-between;
 
     }
     &__name{
         font-family: 'Shrikhand', cursive; 
         font-size: $ttl-menu;
-        font-weight: 900;
+        font-weight: 700;
         margin-bottom: 1rem;
     }
     &__btn {
@@ -35,12 +36,17 @@
         @include grad;
         padding: 1rem 2rem 1rem 2rem;
         margin: auto;
-        margin-bottom: 1.5rem;;
+        width: 12rem;
+        margin-bottom: 1.5rem;
     }
     &__i {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
         position: absolute;
         right: 7%;
         font-size: 1.5rem;
+        font-weight: 200;
         cursor: pointer;
         & .anim {                
             background: linear-gradient(170deg, $secondary-color, $primary-color);
@@ -48,8 +54,6 @@
             color: transparent;
             position: absolute;
             z-index: 15;
-            left: 0;
-            top: 2px;
             transform: scale(0.01);
             transition: transform .1s ease-out;
         }
@@ -64,7 +68,7 @@
 
 .choice {
     margin-bottom: 1rem;
-
+    &__part { margin-bottom: 2rem; }
     /*animation*/
     &__item {
         @for $i from 1 through 4 {
@@ -92,22 +96,24 @@
 
     &__step {
         font-weight: 300;
+        font-size: 1rem;
         display: inline-block;
         position: relative;
         text-transform: uppercase;
-        margin-bottom: 2rem;
+        margin-bottom: 1.2rem;
         &:before{
             content: "";
             position: absolute;
             width: 3rem;
             height: 1px;
-            bottom: -.8rem;
+            bottom: -.5rem;
             left: 0%;
-            border-bottom: .4rem solid $tertiary-color;
+            border-bottom: .2rem solid $tertiary-color;
         }
         &--flex {
             @include col-c;
             align-items: center;
+            gap: .3rem;
         }
     }
     &__item {
@@ -117,10 +123,10 @@
         flex-wrap: nowrap;
         overflow: hidden;
         width: 90vw;
-        height: 13vh;
+        line-height: 125%;
         background: white;
         border-radius: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
         &--p {
             display: flex;
             flex-direction: column;
@@ -158,6 +164,7 @@
     }
     &__subtitle {
         margin: 0rem .5rem 1rem .5rem;
+        font-weight: 300;
     }
     &__price {
         display: flex;
