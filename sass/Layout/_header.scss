@@ -12,7 +12,7 @@ header {
     box-shadow: 0rem .2rem .9rem $shadow;
     min-width: 100vw;
     max-width:100%;
-    height: 8.8vh;
+    height: 9vh;
     min-height: 50px;
     
 }
@@ -31,7 +31,7 @@ header {
         position: fixed;
         transform: translateY(-50%);
         left: 2vw;
-        top: 4.4vh;
+        top: 4.5vh;
         font-size: 1.3rem;
         z-index: 20;
         & a {            
@@ -59,16 +59,18 @@ header {
     
     @media screen and (min-width: 1024px) {
         header {
+            height: 6vh;
+            min-height: 50px;
         }
 
         .logo {
             &__link {
-                left: 1rem;
-                top: 3.3vh;
+                left: 2vw;
+                top: 3vh;
             }
         }
 
         .content {
-            padding-top: 8.8vh;
+            padding-top: 6vh;
         }
     }

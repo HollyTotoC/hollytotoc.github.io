@@ -100,7 +100,7 @@
 
 .result {
     background: $lgray;
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 2rem 1rem 5rem 1rem;
     &__title {
         font-size: $xl;
         font-weight: 900;
@@ -160,13 +160,13 @@
                 color: transparent;
                 position: absolute;
                 z-index: 15;
-                top: -1px;
+                top: 0px;
                 transform: scale(0.01);
                 transition: transform .1s ease-out;
             }
             &:hover {
                 & .anim {
-                    transform: scale(1.02);
+                    transform: scale(1.05);
                 }
             } 
 
