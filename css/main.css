@@ -164,7 +164,6 @@ header {
 }
 
 .lds-spinner {
-  color: official;
   display: inline-block;
   position: relative;
   width: 80px;
@@ -421,7 +420,7 @@ header {
 .result__card--img img {
   -o-object-fit: cover;
      object-fit: cover;
-  aspect-ratio: 1.8;
+  aspect-ratio: 9/5;
 }
 .result__card--new {
   z-index: 10;
@@ -492,7 +491,7 @@ header {
     width: 42vw;
   }
   .result__card--img img {
-    aspect-ratio: 2, 5;
+    aspect-ratio: 5/2;
   }
   .result__card--new {
     top: 4%;
@@ -538,7 +537,7 @@ header {
     width: 22.5vw;
   }
   .result__card--img img {
-    aspect-ratio: 2, 5;
+    aspect-ratio: 5/2;
   }
   .result__card--new {
     top: 4%;
